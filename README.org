@@ -1,0 +1,11 @@
+[[https://github.com/ROCKTAKEY/tab-bar-display][https://img.shields.io/github/tag/ROCKTAKEY/tab-bar-display.svg?style=flat-square]]
+[[file:LICENSE][https://img.shields.io/github/license/ROCKTAKEY/tab-bar-display.svg?style=flat-square]]
+[[https://github.com/ROCKTAKEY/tab-bar-display/actions][https://img.shields.io/github/workflow/status/ROCKTAKEY/tab-bar-display/CI/master.svg?style=flat-square]]
+* Display strings on tab-bar in Emacs.
+
+* How to Use?
+  Turn on ~tab-bar-mode~ and ~tab-bar-display-mode~.
+  Then, you can see ~tab-bar-display-before~ formatted ~format-mode-line~
+  before tabs, and ~tab-bar-display-after~ after tabs.
+* License
+  This package is licensed by GPLv3. See [[file:LICENSE][LICENSE]].
