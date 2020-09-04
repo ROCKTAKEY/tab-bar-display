@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: tools
 
-;; Version: 1.0.0
+;; Version: 1.1.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/ROCKTAKEY/tab-bar-display
 
@@ -49,6 +49,11 @@ Should be acceptable for `format-mode-line'."
   :group 'tab-bar-display
   :type [string list])
 
+(defcustom tab-bar-display-no-tabs nil
+  "If non-nil, tabs by `tab-bar-mode' are not displayed."
+  :group 'tab-bar-display
+  :type 'boolean)
+
 (defun tab-bar-display-advice (result)
   "Advice for function `tab-bar-display-mode'.
 Add `tab-bar-display-before' and `tab-bar-display-after' displayer to RESULT."
@@ -58,7 +63,7 @@ Add `tab-bar-display-before' and `tab-bar-display-after' displayer to RESULT."
       menu-item
       ,(format-mode-line tab-bar-display-before)
       ignore)
-     ,@(cdr result)
+     ,@(unless tab-bar-display-no-tabs (cdr result))
      (tab-bar-dislpay-after
       menu-item
       ,(format-mode-line tab-bar-display-after)
