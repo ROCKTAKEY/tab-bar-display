@@ -7,5 +7,41 @@
   Turn on ~tab-bar-mode~ and ~tab-bar-display-mode~.
   Then, you can see ~tab-bar-display-before~ formatted ~format-mode-line~
   before tabs, and ~tab-bar-display-after~ after tabs.
+
+* Example
+  #+begin_src emacs-lisp :tangle yes
+(defface my-tab-bar-path
+  '((t (:background "#000000" :foreground "#00ff00")))
+  "My face for path on tab-bar.")
+
+
+(defface my-tab-bar-time
+  '((t (:background "#000000" :foreground "#ff0000")))
+  "My face for path on tab-bar.")
+
+(setq tab-bar-display-before
+      '((:eval
+         (propertize
+          (format-time-string " %Y/%m/%d %T ")
+           'face 'my-tab-bar-time))
+        " "
+        (:eval
+         (if-let ((str (buffer-file-name (current-buffer))))
+             (propertize
+              (concat " " str " ")
+              'face 'my-tab-bar-path)
+           ""))))
+  #+end_src
+  The code above expresses:
+  [[https://raw.githubusercontent.com/ROCKTAKEY/images/tab-bar-display/demo1.png]]
+
+** Note
+   The "%T" in ~format-time-string~ means HH:MM:SS. However, interval of ~tab-bar~
+   update is longer than 1 second, so the second displayed in tab-bar stop.
+   If you want see real time, write like this:
+   #+begin_src emacs-lisp :tangle yes
+   (run-with-timer 1 1 #'force-mode-line-update)
+   #+end_src
+   It might delay emacs.
 * License
   This package is licensed by GPLv3. See [[file:LICENSE][LICENSE]].
