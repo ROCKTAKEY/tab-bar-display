@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: tools
 
-;; Version: 0.0.0
+;; Version: 0.0.1
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/ROCKTAKEY/tab-bar-display
 
@@ -57,7 +57,7 @@ Add `tab-bar-display-before' and `tab-bar-display-after' displayer to RESULT."
       ,(format-mode-line tab-bar-display-before)
       ignore)
      ,@(cdr result)
-     (tab-bar-dislpay-before
+     (tab-bar-dislpay-after
       menu-item
       ,(format-mode-line tab-bar-display-after)
       ignore))))
