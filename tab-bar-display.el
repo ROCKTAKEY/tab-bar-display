@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: tools
 
-;; Version: 0.0.1
+;; Version: 1.0.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/ROCKTAKEY/tab-bar-display
 
@@ -24,7 +24,9 @@
 
 ;;; Commentary:
 
-;;
+;; Turn on ~tab-bar-mode~ and ~tab-bar-display-mode~.
+;; Then, you can see ~tab-bar-display-before~ formatted ~format-mode-line~
+;; before tabs, and ~tab-bar-display-after~ after tabs.
 
 ;;; Code:
 
