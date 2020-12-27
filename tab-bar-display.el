@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: tools
 
-;; Version: 1.1.0
+;; Version: 1.1.1
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/ROCKTAKEY/tab-bar-display
 
@@ -50,7 +50,7 @@ Should be acceptable for `format-mode-line'."
   :type [string list])
 
 (defcustom tab-bar-display-no-tabs nil
-  "If non-nil, tabs by `tab-bar-mode' are not displayed."
+  "If non-nil, tabs by command `tab-bar-mode' are not displayed."
   :group 'tab-bar-display
   :type 'boolean)
 
