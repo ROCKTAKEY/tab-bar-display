@@ -2,3 +2,5 @@
 
 (package (tab-bar-display
           (recipe . (:fetcher github :repo "ROCKTAKEY/tab-bar-display"))))
+
+(dev-dependency undercover)
