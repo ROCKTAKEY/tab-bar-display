@@ -26,6 +26,11 @@
 
 ;;; Code:
 
+(require 'undercover)
+(undercover "*.el"
+            (:report-file "coverage-final.json")
+            (:send-report nil))
+(require 'tab-bar-display)
 
 
 (provide 'tab-bar-display-test)
