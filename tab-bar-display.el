@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: tools
 
-;; Version: 1.1.1
+;; Version: 1.1.2
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/ROCKTAKEY/tab-bar-display
 
@@ -59,12 +59,12 @@ Should be acceptable for `format-mode-line'."
 Add `tab-bar-display-before' and `tab-bar-display-after' displayer to RESULT."
   (cons
    (car result)
-   `((tab-bar-dislpay-before
+   `((tab-bar-display-before
       menu-item
       ,(format-mode-line tab-bar-display-before)
       ignore)
      ,@(unless tab-bar-display-no-tabs (cdr result))
-     (tab-bar-dislpay-after
+     (tab-bar-display-after
       menu-item
       ,(format-mode-line tab-bar-display-after)
       ignore))))
